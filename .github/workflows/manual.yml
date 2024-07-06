@@ -33,13 +33,18 @@ jobs:
     
     - name: Setup Node.js environment
       uses: actions/setup-node@v4.0.2
+
+    - name: Checkout
+      uses: actions/checkout@v4.1.7
+      with:
+        path: repo
     
     - name: Install dependencies
       run: |
-        cd quartz
+        cd repo/quartz
         npm install
 
     - name: Publish site
       run: |
-        cd quartz
+        cd repo/quartz
         npx quartz build --directory ../vault --output ../site
