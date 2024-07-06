@@ -36,15 +36,15 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v4.1.7
-      with:
-        path: repo
-    
+      
     - name: Install dependencies
       run: |
-        cd repo/quartz
+        pwd
+        ls -la
+        cd quartz
         npm install
 
     - name: Publish site
       run: |
-        cd repo/quartz
+        cd quartz
         npx quartz build --directory ../vault --output ../site
