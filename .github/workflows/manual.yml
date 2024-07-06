@@ -30,3 +30,16 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
+    
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4.0.2
+    
+    - name: Install dependencies
+      run: |
+        cd quartz
+        npm install
+
+    - name: Publish site
+      run: |
+        cd quartz
+        npx quartz build --directory ../vault --output ../site
