@@ -48,3 +48,5 @@ jobs:
       run: |
         cd quartz
         npx quartz build --directory ../vault --output ../site
+        cd ..
+        ls -la
