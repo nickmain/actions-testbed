@@ -1,5 +1,5 @@
 ---
-title: Super-duper Home Page
+title: Github Actions Obsidian/Quartz Publishing Testbed
 aliases:
   - Home
 ---
