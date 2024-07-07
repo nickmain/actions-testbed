@@ -39,8 +39,6 @@ jobs:
       
     - name: Install dependencies
       run: |
-        pwd
-        ls -la
         cd quartz
         npm install
 
@@ -48,5 +46,8 @@ jobs:
       run: |
         cd quartz
         npx quartz build --directory ../vault --output ../site
-        cd ..
-        ls -la
+
+    - name: Upload GitHub Pages artifact
+      uses: actions/upload-pages-artifact@v3.0.1
+      with:
+      path: site/      
