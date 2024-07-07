@@ -1,5 +1,5 @@
 ---
-title: Github Actions Obsidian/Quartz Publishing Testbed
+title: Github Actions Publishing Testbed
 aliases:
   - Home
 ---
